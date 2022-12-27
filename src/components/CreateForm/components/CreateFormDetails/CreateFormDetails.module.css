@@ -1,0 +1,10 @@
+.details {
+  display: flex;
+  gap: 20px;
+  margin-top: 15px;
+}
+
+.col {
+  width: 50%;
+}
+
