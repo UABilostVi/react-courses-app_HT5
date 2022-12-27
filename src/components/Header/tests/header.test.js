@@ -1,5 +1,5 @@
 import { render, screen } from '@testing-library/react';
-import '@testing-library/jest-dom/extend-expect';
+import '@testing-library/jest-dom';
 import { Provider } from 'react-redux';
 import { BrowserRouter as Router } from 'react-router-dom';
 import Header from '../Header';
@@ -29,5 +29,15 @@ describe('header component tests', () => {
 			</Provider>
 		);
 		expect(screen.queryByText(mockedState.user.name)).toBeInTheDocument();
+	});
+	it('should have logo', () => {
+		render(
+			<Provider store={mockedStore}>
+				<Router>
+					<Header />
+				</Router>
+			</Provider>
+		);
+		expect(screen.queryByAltText('logo')).toBeInTheDocument();
 	});
 });
