@@ -37,7 +37,6 @@ const Header = () => {
 			<div className='container'>
 				<div className={classes.wrapper}>
 					<Logo />
-					<h1>header</h1>
 					{renderLog && (
 						<>
 							{!isAuth && (

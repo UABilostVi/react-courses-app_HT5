@@ -12,7 +12,6 @@ import { FILL_ALERT } from '../../constants';
 export const CourseContext = createContext({});
 
 const CreateForm = () => {
-	console.log('Form');
 	const navigate = useNavigate();
 	const dispatch = useDispatch();
 	const { courseId } = useParams();
@@ -59,7 +58,7 @@ const CreateForm = () => {
 
 	return (
 		<div className='container'>
-			<form onSubmit={onSubmit}>
+			<form onSubmit={onSubmit} className='coursesForm'>
 				<CourseContext.Provider value={course}>
 					<CreateFormMain />
 					<CreateFormDetails getCourseAuthors={getCourseAuthors} />

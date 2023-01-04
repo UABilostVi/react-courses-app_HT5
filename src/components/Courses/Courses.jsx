@@ -49,10 +49,14 @@ const Courses = () => {
 			<div className={classes.nav}>
 				<SearchBar onSubmit={onSubmit} onChange={onChange} />
 				<ProtectedContent requiredRole='admin'>
-					<Button buttonText={BUTTON_ADD_COURSE_TEXT} onClick={onAddCourse} />
+					<Button
+						id='buttonAddCourse'
+						buttonText={BUTTON_ADD_COURSE_TEXT}
+						onClick={onAddCourse}
+					/>
 				</ProtectedContent>
 			</div>
-			<div>{coursesList}</div>
+			<div className='coursesList'>{coursesList}</div>
 		</div>
 	);
 };

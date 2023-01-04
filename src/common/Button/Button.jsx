@@ -7,7 +7,12 @@ const Button = (props) => {
 	classes += props.centered === true ? ' centered' : '';
 	classes += props.serviceButton === true ? ' service-button' : '';
 	return (
-		<button className={classes} type={props.type} onClick={props.onClick}>
+		<button
+			id={props.id}
+			className={classes}
+			type={props.type}
+			onClick={props.onClick}
+		>
 			{props.buttonText}
 		</button>
 	);
