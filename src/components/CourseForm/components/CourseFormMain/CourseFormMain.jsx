@@ -3,7 +3,7 @@ import { useLocation } from 'react-router-dom';
 
 import { Input } from '../../../../common/Input';
 import { Button } from '../../../../common/Button';
-import { CourseContext } from '../../CreateForm';
+import { CourseContext } from '../../CourseForm';
 import {
 	TITLE_PLCHDR,
 	DESCR_PLCHDR,
@@ -14,9 +14,9 @@ import {
 	TITLE_MIN_LENGTH,
 } from '../../../../constants';
 
-import classes from './CreateFormMain.module.css';
+import classes from './CourseFormMain.module.css';
 
-const CreateFormMain = () => {
+const CourseFormMain = () => {
 	const course = useContext(CourseContext);
 	const location = useLocation();
 	return (
@@ -50,4 +50,4 @@ const CreateFormMain = () => {
 	);
 };
 
-export default CreateFormMain;
+export default CourseFormMain;

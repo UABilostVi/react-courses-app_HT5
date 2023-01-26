@@ -8,7 +8,7 @@ import { Header } from './components/Header';
 import { Login } from './components/Login';
 import { Registration } from './components/Registration';
 import { Courses } from './components/Courses';
-import { CreateForm } from './components/CreateForm';
+import { CourseForm } from './components/CourseForm';
 import { CourseInfo } from './components/CourseInfo';
 import { PrivateRoute } from './components/PrivateRouter';
 
@@ -48,8 +48,8 @@ function App() {
 					/>
 					<Route path='courses' element={<Courses />} />
 					<Route element={<PrivateRoute />}>
-						<Route path='courses/add' element={<CreateForm />} />
-						<Route path='courses/update/:courseId' element={<CreateForm />} />
+						<Route path='courses/add' element={<CourseForm />} />
+						<Route path='courses/update/:courseId' element={<CourseForm />} />
 					</Route>
 					<Route path='courses/:courseId' element={<CourseInfo />} />
 					<Route path='*' element={<h1>Page not found</h1>} />

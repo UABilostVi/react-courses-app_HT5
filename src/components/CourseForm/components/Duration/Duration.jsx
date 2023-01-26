@@ -6,7 +6,7 @@ import { DUR_PLCHDR, MIN_TIME, DURATION } from '../../../../constants';
 
 import classes from './Duration.module.css';
 
-import { CourseContext } from '../../CreateForm';
+import { CourseContext } from '../../CourseForm';
 
 const Duration = () => {
 	const [time, setTime] = useState(MIN_TIME);

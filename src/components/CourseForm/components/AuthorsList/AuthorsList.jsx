@@ -16,9 +16,9 @@ const AuthorsList = (props) => {
 	});
 
 	return props.list.length === 0 ? (
-		<div className='emptyList'>{EMPTY_AUTHORS_LIST}</div>
+		<div className={`emptyList ${props.class}`}>{EMPTY_AUTHORS_LIST}</div>
 	) : (
-		<div>
+		<div className={`${props.class}`}>
 			<legend className='legend'>{props.title}</legend>
 			{list}
 		</div>

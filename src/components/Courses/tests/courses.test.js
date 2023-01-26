@@ -1,12 +1,10 @@
-import { render, screen, fireEvent, waitFor } from '@testing-library/react';
+import { render, screen, waitFor } from '@testing-library/react';
 import '@testing-library/jest-dom';
 import { Provider } from 'react-redux';
 import { BrowserRouter as Router } from 'react-router-dom';
 import Courses from '../Courses';
-import { CourseCard } from '../components/CourseCard';
 import userEvent from '@testing-library/user-event';
 import { BUTTON_ADD_COURSE_TEXT } from '../../../constants';
-import CreateForm from '../../CreateForm';
 
 const mockedState = {
 	user: {
@@ -109,7 +107,7 @@ describe('courses component tests', () => {
 				</Router>
 			</Provider>
 		);
-		userEvent.click(screen.getByText('Add new course'));
+		userEvent.click(screen.getByText(BUTTON_ADD_COURSE_TEXT));
 		waitFor(() => {
 			expect(document.querySelector('.coursesForm')).toBeInTheDocument();
 		});

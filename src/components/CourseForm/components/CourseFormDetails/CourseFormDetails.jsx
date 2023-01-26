@@ -10,11 +10,11 @@ import {
 	BUTTON_DEL_AUTHOR_TEXT,
 } from '../../../../constants';
 
-import { CourseContext } from '../../CreateForm';
+import { CourseContext } from '../../CourseForm';
 
-import classes from './CreateFormDetails.module.css';
+import classes from './CourseFormDetails.module.css';
 
-const CreateFormDetails = (props) => {
+const CourseFormDetails = (props) => {
 	const authors = useSelector(getAuthors);
 	const [courseAuthors, setCourseAuthors] = useState([]);
 	const [allAuthors, setAllAuthors] = useState([]);
@@ -53,12 +53,14 @@ const CreateFormDetails = (props) => {
 			</div>
 			<div className={classes.col}>
 				<AuthorsList
+					class='allAuthorsList'
 					list={allAuthors}
 					title='Authors'
 					clickHandler={addCourseAuthor}
 					buttonText={BUTTON_ADD_AUTHOR_TEXT}
 				/>
 				<AuthorsList
+					class='courseAuthorsList'
 					list={courseAuthors}
 					title='Course authors'
 					clickHandler={delCourseAuthor}
@@ -69,4 +71,4 @@ const CreateFormDetails = (props) => {
 	);
 };
 
-export default CreateFormDetails;
+export default CourseFormDetails;
